@@ -1,4 +1,4 @@
-/*global expect */
+/*global expect, select, getComponentById */
 /* jshint expr:true */
 
 import Ember from 'ember';
@@ -7,7 +7,7 @@ import { it } from 'ember-mocha';
 import { beforeEach, afterEach, describe } from '../test-helper';
 import { shouldBindAttrs } from './shared/attr-test';
 
-var App;
+let App;
 
 describe('XSelect: Multiple Selection', function() {
   beforeEach(function() {
@@ -15,7 +15,7 @@ describe('XSelect: Multiple Selection', function() {
     visit("/multiple");
   });
   beforeEach(function() {
-    var el = Ember.$('select');
+    let el = Ember.$('select');
     this.component = getComponentById(el.attr('id'));
     this.$ = function() {
       return this.component.$.apply(this.component, arguments);

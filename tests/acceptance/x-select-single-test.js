@@ -1,4 +1,4 @@
-/*global expect */
+/*global expect, getComponentById, select */
 /* jshint expr:true */
 
 import Ember from 'ember';
@@ -8,7 +8,7 @@ import { beforeEach, afterEach, describe } from '../test-helper';
 import { stanley } from 'dummy/mixins/folks';
 import { shouldBindAttrs } from './shared/attr-test';
 
-var App;
+let App;
 
 describe('XSelect: Single Selection', function() {
   beforeEach(function() {
@@ -16,7 +16,7 @@ describe('XSelect: Single Selection', function() {
     visit("/single");
   });
   beforeEach(function() {
-    var el = Ember.$('select');
+    let el = Ember.$('select');
     this.component = getComponentById(el.attr('id'));
     this.$ = function() {
       return this.component.$.apply(this.component, arguments);

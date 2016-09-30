@@ -39,12 +39,12 @@ export default Ember.Controller.extend(Cars, {
     },
     updateField: function(object) {
       if (object) {
-        console.log('You selected Make:', object.name);
+        // console.log('You selected Make:', object.name);
       }
     },
     updateSelectedQuantity: function(object) {
       if (object != null) {
-        console.log('You selected Quantity:', object);
+        // console.log('You selected Quantity:', object);
       }
     }
   }

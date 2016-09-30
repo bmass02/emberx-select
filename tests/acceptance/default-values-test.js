@@ -1,3 +1,5 @@
+/*global select */
+
 /* jshint expr:true */
 import {
   describe,
@@ -8,6 +10,8 @@ import {
 import { expect } from 'chai';
 import startApp from '../helpers/start-app';
 import Ember from 'ember';
+
+const { $ } = Ember;
 
 describe('XSelect: Default Values', function() {
   let application;
